@@ -1,0 +1,369 @@
+* {
+    font-family: 'Cabin', sans-serif;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    background-color: #FFECD1;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+header {
+    width: 100%;
+    overflow: hidden;
+}
+
+nav {
+    display: flex;
+    position: fixed;
+    justify-content: flex-end;
+    width: 100%;
+    margin: 0;
+    height: 50px;
+    background-color: #001524;
+    z-index: 4;
+}
+
+.hamburger {
+    display: none;
+}
+
+.nav-bar {
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav a {
+    font-size: 1.3em;
+    color: white;
+    text-decoration: none;
+    transition: .3s ease;
+}
+
+.header-image {
+    display: block;
+    margin: 50px 0 0;
+    width: 100%;
+    height: 75vh;
+}
+
+.header-image h1 {
+    display: block;
+    position: relative;
+    margin: 0;
+    top: calc(100% - 2em);
+    padding: 20px;
+    color: white;
+    font-size: 4em;
+}
+
+main {
+    margin: 0 10%;
+}
+
+#about {
+    width: 100%;
+    background-color: #2199AB;
+    color: white;
+    border-radius: 5px;
+}
+
+.inner-section {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 15% 5%;
+    padding: 2.5% 0;
+}
+
+.about-image {
+    padding: 10% 10% 10% 20%;
+    /*width: 400px;*/
+    /*height: 300px;*/
+    /*margin-right: 15%;*/
+}
+
+.shadow-image,
+.about-image img {
+    width: 300px;
+    height: 300px;
+}
+
+.shadow-image {
+    background-color: midnightblue;
+    position: absolute;
+    transform: translate(-70%, -20%);
+}
+
+.about-image img {
+    position: relative;
+    display: block;
+}
+
+#about article {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 24px 5%;
+    text-align: left;
+    border: 4px dotted white;
+    /*border-radius: 15px;*/
+    height: max-content;
+}
+
+#about h2 {
+    align-self: flex-start;
+    margin: 0 0 12px 5%;
+}
+
+#portfolio,
+.img-other {
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+
+#portfolio {
+    width: 85%;
+    color: #b33e14;
+    display: grid;
+    grid-template:
+        "header header" 60px
+        "img-main img-other" 1fr
+        / 60% 1fr
+    ;
+    margin: 15% auto;
+}
+
+#portfolio>h2 {
+    color: #5D200B;
+}
+
+#portfolio>h2 {
+    text-align: center;
+    grid-area: header;
+    font-size: 2.5em;
+}
+
+#portfolio>figure {
+    grid-area: img-main;
+    text-align: center;
+    position: relative;
+    border-radius: 5px;
+}
+
+#portfolio>figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#portfolio>figure figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5%;
+    font-size: 3vw;
+}
+
+.img-other {
+    grid-area: img-other;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.img-img-other {
+    position: relative;
+    background-color: #26b1c6;
+    border-radius: 5px;
+    transition: .5s ease;
+}
+
+.selected {
+    box-shadow: 0 0 15px 0 #797979;
+    transform: scale(1.05);
+}
+
+.img-img-other img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.img-img-other h3 {
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    font-size: 1.25vw;
+    padding: 2.5%;
+}
+
+.img-img-other:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px 0 #797979;
+    cursor: pointer;
+}
+
+footer {
+    width: 90%;
+    background-color: #001524;
+    color: #ffffff;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5%;
+}
+
+.inner-footer {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+#contacts {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.contacts-footer {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.contacts-footer i {
+    font-size: 32px;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+nav a:hover,
+.contacts-footer i:hover {
+    color: #26b1c6;
+}
+
+@media screen and (max-width: 1100px){
+    .shadow-image {
+        display: none;
+    }
+
+    .inner-section {
+        padding: 5% 0;
+        flex-direction: column;
+        font-size: 1.5em;
+    }
+
+    .about-image {
+        padding: 5% 5% 5%;
+    }
+
+    #about article {
+        margin: 0 5% 5%;
+    }
+
+    footer {
+        padding: 12.5% 0;
+        width: 100%;
+        height: 270px;
+    }
+
+    #contacts {
+        height: 30%;
+        width: 30%;
+    }
+
+    .inner-footer {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 840px){
+    nav {
+        align-items: center;
+        /*overflow: hidden;*/
+    }
+
+    .nav-bar {
+        width: 30%;
+        height: 30vh;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        padding-top: 50px;
+        padding-bottom: 2.5%;
+        right: -30%;
+        background-color: #00223b;
+        border-radius: 10px 0 0 10px;
+        transition: .2s linear;
+    }
+
+    .hamburger {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+        z-index: 4;
+        font-size: 1.5em;
+        color: white;
+        transition: .2s ease;
+    }
+
+    .hamburger:hover {
+        color: #26b1c6;
+        cursor: pointer;
+    }
+
+    .hamburger:active {
+        color: white;
+    }
+
+    #hamburger-checkbox:checked ~ .nav-bar {
+        right: 0;
+    }
+
+    #portfolio {
+        width: 100%;
+        grid-template:
+        "header header header" 60px
+        "img-main img-main img-main"
+        "img-main img-main img-main"
+        "img-other img-other img-other" 1fr
+        / 1fr 1fr 1fr
+    ;
+    }
+
+    .img-other {
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #portfolio>figure figcaption {
+        font-size: 6vw;
+    }
+
+    .img-img-other h3 {
+        font-size: 2.5vw;
+    }
+}
