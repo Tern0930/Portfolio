@@ -2,37 +2,38 @@ const galleryPics = [];
 const gallery = document.querySelector('.img-other');
 
 const galleryProj = new Map();
-galleryProj.set('source/TwigSleeping.jpg', {name: 'Rocket launch',
+galleryProj.set('source/Rocket_launch.png', {name: 'Rocket launch',
     description: `Used technologies: HTML 5, CSS 3, Native JS.<br><br>
 This project was developed during the JetBrains Academy track
      and advanced by adding logic to levers to control rocket trajectory. 
      In this project you are supposed to enter the valid password to access control panel and control the rocket launch system by interacting with levers.<br><br>
 The trajectory itself is changed by creating CSS rules and adding them in direct order to the additional CSS file.`});
-galleryProj.set('source/pic1.jpg', {name: 'Task list',
+galleryProj.set('source/To do list.jpg', {name: 'Task list',
     description: `Used technologies: HTML 5, CSS 3, Native JS.<br><br>
 This project was developed during the JetBrains Academy track.
      This project is used to track down your tasks and mark them as completed by crossing them out, 
      also you are able to delete them.<br><br>
      The data is stored in local storage so you don't have a need to remain the page opened not to lose your to-do list. 
 `});
-galleryProj.set('source/pic2.jpg', {name: 'Case converter',
+galleryProj.set('source/Text converter.jpg', {name: 'Case converter',
     description: `Used technologies: HTML 5, CSS 3, Native JS.<br><br>
 This project was developed during the JetBrains Academy track.
      It allows the user to convert text to lower, upper, proper, and sentence cases. 
      Also the project allows to download text. 
      The text file is created right on page.`});
-galleryProj.set('source/pic3.jpg', {name: 'Flashcards',
+galleryProj.set('source/Flashcards.png', {name: 'Flashcards',
     description: `Used technologies: HTML 5, CSS 3.<br><br>
 This project was developed during the JetBrains Academy track.
      It is the example of flashcards with 3D animation to remember capitals presented. `});
-galleryProj.set('source/pic4.jpg', {name: 'Pic 4',
-    description: `Sample description 4`});
-galleryProj.set('source/pic5.jpg', {name: 'Pic 5',
-    description: `Sample description 5`});
+galleryProj.set('source/TwigSleeping.jpg', {name: 'Portfolio',
+    description: `Used technologies: HTML 5, CSS 3, Native JS.<br><br>
+     You are on this page now. This is my portfolio for the current day currently in progress.`});
+galleryProj.set('source/TwigInBandanna.jpg', {name: '',
+    description: `WIP`});
 
-galleryPics.push('source/TwigSleeping.jpg');
-for (let i = 1; i <= 5; ++i) {
-    galleryPics.push(`source/pic${i}.jpg`);
+// galleryPics.push('source/TwigSleeping.jpg');
+for (const pic of galleryProj.keys()){
+    galleryPics.push(pic);
 }
 
 const mainProj = document.querySelector('figure');
